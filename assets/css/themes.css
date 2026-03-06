@@ -1,0 +1,93 @@
+/* 4 themes: dark gothic / dracula / business / lovely pastel red pink */
+/* Text contrast ~4.75:1 minimum for visibility (WCAG AA) */
+
+/* Dark Gothic – deep purples, blacks, candlelit */
+[data-theme="gothic"] {
+  --color-primary: #9B7EBD;
+  --color-secondary: #B8A5C9;
+  --color-bg-primary: #0D0D0F;
+  --color-bg-secondary: #1A1820;
+  --color-bg-tertiary: #2D2A38;
+  --color-text-primary: #D4CCE0;
+  --color-text-secondary: #E8E4EE;
+  --color-text-muted: #A39BB5;
+  --color-border: #3D3848;
+  --color-hover: #2D2A38;
+  --color-success: #7B9E7B;
+  --color-info: #7B8EBD;
+  --color-warning: #C4A574;
+  --color-danger: #B17C74;
+}
+
+/* Dracula – classic IDE palette */
+[data-theme="dracula"] {
+  --color-primary: #BD93F9;
+  --color-secondary: #FF79C6;
+  --color-bg-primary: #282A36;
+  --color-bg-secondary: #44475A;
+  --color-bg-tertiary: #6272A4;
+  --color-text-primary: #F8F8F2;
+  --color-text-secondary: #FFFFFF;
+  --color-text-muted: #BFBFBF;
+  --color-border: #6272A4;
+  --color-hover: #44475A;
+  --color-success: #50FA7B;
+  --color-info: #8BE9FD;
+  --color-warning: #FFB86C;
+  --color-danger: #FF5555;
+}
+
+/* Business – clean, professional */
+[data-theme="business"] {
+  --color-primary: #2563EB;
+  --color-secondary: #3B82F6;
+  --color-bg-primary: #F8FAFC;
+  --color-bg-secondary: #E2E8F0;
+  --color-bg-tertiary: #CBD5E1;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #0F172A;
+  --color-text-muted: #64748B;
+  --color-border: #94A3B8;
+  --color-hover: #E2E8F0;
+  --color-success: #059669;
+  --color-info: #2563EB;
+  --color-warning: #D97706;
+  --color-danger: #DC2626;
+}
+
+/* Lovely Pastel Red Pink */
+[data-theme="pastel"] {
+  --color-primary: #E91E8C;
+  --color-secondary: #F472B6;
+  --color-bg-primary: #FFF5F8;
+  --color-bg-secondary: #FCE7F0;
+  --color-bg-tertiary: #FBCFE8;
+  --color-text-primary: #4C1D35;
+  --color-text-secondary: #2D0F1F;
+  --color-text-muted: #831843;
+  --color-border: #F9A8D4;
+  --color-hover: #FCE7F0;
+  --color-success: #BE185D;
+  --color-info: #DB2777;
+  --color-warning: #C2410C;
+  --color-danger: #9D174D;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.bg-night { background-color: var(--color-bg-primary) !important; }
+.bg-eerie-black { background-color: var(--color-bg-secondary) !important; }
+.bg-dark-slate-gray { background-color: var(--color-bg-tertiary) !important; }
+.bg-gray-700 { background-color: var(--color-bg-secondary) !important; }
+.bg-gray-600 { background-color: var(--color-bg-tertiary) !important; }
+
+.text-dim-gray { color: var(--color-text-primary) !important; }
+.text-gray-200, .text-gray-100 { color: var(--color-text-secondary) !important; }
+.text-gray-300, .text-gray-400 { color: var(--color-text-muted) !important; }
+.text-moonstone { color: var(--color-primary) !important; }
+
+.border-gray-600, .border-gray-700 { border-color: var(--color-border) !important; }
+.hover\:bg-gray-600:hover, .hover\:bg-gray-700:hover { background-color: var(--color-hover) !important; }

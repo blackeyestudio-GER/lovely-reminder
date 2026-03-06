@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-night text-dim-gray;
+}
+
+@layer components {
+  .btn {
+    @apply rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center;
+  }
+
+  .btn-icon { @apply p-2 border-2; }
+  .btn-md { @apply px-4 py-2 border-2 font-semibold text-sm md:text-base; }
+  .btn-lg { @apply px-5 py-3 border-2 font-semibold text-base md:text-lg; }
+
+  .btn-primary {
+    @apply border-2 font-semibold rounded-lg transition-colors duration-200;
+    border-color: var(--color-success);
+    color: var(--color-success);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-success);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-secondary {
+    @apply border-2 font-semibold rounded-lg transition-colors duration-200;
+    border-color: var(--color-info);
+    color: var(--color-info);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-info);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-danger {
+    @apply border-2 font-semibold rounded-lg transition-colors duration-200;
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+  }
+  .btn-danger:hover {
+    background-color: var(--color-danger);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-neutral {
+    @apply border-2 font-semibold rounded-lg transition-colors duration-200;
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+  }
+  .btn-neutral:hover {
+    background-color: var(--color-hover);
+    color: var(--color-text-primary);
+  }
+
+  .btn-add {
+    @apply p-2 border-2 rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center;
+    border-color: var(--color-success);
+    color: var(--color-success);
+  }
+  .btn-add:hover {
+    background-color: var(--color-success);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-edit {
+    @apply p-2 border-2 rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center;
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+  }
+  .btn-edit:hover {
+    background-color: var(--color-warning);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-delete {
+    @apply p-2 border-2 rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center;
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+  }
+  .btn-delete:hover {
+    background-color: var(--color-danger);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-export {
+    @apply w-full px-6 py-3 border-2 font-semibold rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center text-sm md:text-base;
+    border-color: var(--color-success);
+    color: var(--color-success);
+  }
+  .btn-export:hover {
+    background-color: var(--color-success);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-import {
+    @apply w-full px-6 py-3 border-2 font-semibold rounded-lg transition-colors duration-200 cursor-pointer inline-flex items-center justify-center text-sm md:text-base;
+    border-color: var(--color-warning);
+    color: var(--color-warning);
+  }
+  .btn-import:hover {
+    background-color: var(--color-warning);
+    color: var(--color-text-secondary);
+  }
+}
