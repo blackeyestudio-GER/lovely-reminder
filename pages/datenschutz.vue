@@ -5,9 +5,12 @@
     <div class="prose prose-invert max-w-none space-y-6 text-gray-200 text-sm md:text-base leading-relaxed">
       <section>
         <h2 class="text-lg font-semibold text-moonstone mb-2">1. Data Controller</h2>
-        <p>Blackeyestudio – Arthur Kielbasa</p>
+        <p>
+          <a href="https://blackeyestudio.de" target="_blank" rel="noopener noreferrer" class="text-moonstone hover:underline">Blackeyestudio</a> – Arthur Kielbasa
+        </p>
         <p>Hafenstr. 71</p>
         <p>46242 Bottrop</p>
+        <p><a href="https://blackeyestudio.de" target="_blank" rel="noopener noreferrer" class="text-moonstone hover:underline">blackeyestudio.de</a></p>
       </section>
 
       <section>
