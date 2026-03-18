@@ -1,6 +1,6 @@
 <template>
   <div class="bg-eerie-black rounded-lg text-gray-100">
-    <section class="bg-gray-700 p-4 md:p-6 rounded-lg shadow-md max-w-lg mx-auto">
+    <section class="p-4 md:p-6 max-w-lg mx-auto">
       <h2 class="text-xl md:text-2xl font-bold text-gray-100 mb-4">Export your data</h2>
       <p class="text-sm text-gray-400 mb-4">You can grab your data to transfer it to another device.</p>
       <div class="flex flex-col gap-3 md:gap-4">
