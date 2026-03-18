@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "HOST=127.0.0.1 PORT=8002 nuxt dev",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
     "generate:icons": "node scripts/generate-pwa-icons.mjs",
     "preview": "nuxt preview",

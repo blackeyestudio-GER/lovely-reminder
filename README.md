@@ -22,7 +22,7 @@ npm install
 npm run dev
 ```
 
-Runs at `http://127.0.0.1:8002` (or next available port if in use)
+Runs at `http://127.0.0.1:3000` (or next available port if in use)
 
 ## PWA Icons
 
