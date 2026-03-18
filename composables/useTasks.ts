@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import {ref} from 'vue';
 
 export interface Task {
   id: string;
@@ -88,6 +88,20 @@ export const useTasks = () => {
     return Math.ceil(task.reactiveDays - elapsedDays);
   };
 
+  const exportTasks = (): string => {
+    return JSON.stringify(tasks.value, null, 2);
+  };
+
+  const importTasks = (jsonStr: string): boolean => {
+    try {
+      tasks.value = JSON.parse(jsonStr);
+      saveToLocalStorage();
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   return {
     tasks,
     loadFromLocalStorage,
@@ -98,5 +112,7 @@ export const useTasks = () => {
     deleteTask,
     isTaskCompleted,
     daysUntilReactivation,
+    exportTasks,
+    importTasks,
   };
 };
