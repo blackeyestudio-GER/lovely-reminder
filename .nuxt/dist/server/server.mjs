@@ -1,1 +1,0 @@
-export { default } from "file:///Users/arthur.kielbasa/PhpstormProjects/lovely-reminder/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"

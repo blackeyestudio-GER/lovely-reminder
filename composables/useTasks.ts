@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 export interface Task {
   id: string;
@@ -41,7 +41,7 @@ export const useTasks = () => {
   const checkAndReactivateTasks = () => {
     const now = Date.now();
     let changed = false;
-    tasks.value = tasks.value.map((task) => {
+    tasks.value = tasks.value.map((task: Task) => {
       if (task.completedAt === null) return task;
       const elapsedDays = (now - task.completedAt) / MS_PER_DAY;
       if (elapsedDays >= task.reactiveDays) {
@@ -67,7 +67,7 @@ export const useTasks = () => {
   };
 
   const completeTask = (taskId: string) => {
-    const task = tasks.value.find((t) => t.id === taskId);
+    const task = tasks.value.find((task: Task) => task.id === taskId);
     if (!task || task.completedAt !== null) return;
     task.completedAt = Date.now();
     saveToLocalStorage();
