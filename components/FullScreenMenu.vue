@@ -12,23 +12,23 @@
       class="menu-dropdown fixed top-16 right-4 z-50 w-64 bg-eerie-black rounded-lg shadow-2xl border-2 border-gray-600 overflow-hidden backdrop-blur-sm"
     >
       <nav class="flex flex-col bg-eerie-black">
-        <NuxtLink to="/" @click="emit('closeMenu')" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700">
+        <NuxtLink to="/" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700" @click="emit('closeMenu')">
           <Icon icon="heroicons:clipboard-document-list-20-solid" class="w-5 h-5 flex-shrink-0" />
           <span>Dashboard</span>
         </NuxtLink>
-        <NuxtLink to="/task-add" @click="emit('closeMenu')" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700">
+        <NuxtLink to="/task-add" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700" @click="emit('closeMenu')">
           <Icon icon="heroicons:plus-circle-20-solid" class="w-5 h-5 flex-shrink-0" />
           <span>Add Task</span>
         </NuxtLink>
-        <NuxtLink to="/settings" @click="emit('closeMenu')" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700">
+        <NuxtLink to="/settings" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700" @click="emit('closeMenu')">
           <Icon icon="heroicons:swatch-20-solid" class="w-5 h-5 flex-shrink-0" />
           <span>Theme & Settings</span>
         </NuxtLink>
-        <NuxtLink to="/export" @click="emit('closeMenu')" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700">
+        <NuxtLink to="/export" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone border-b border-gray-700" @click="emit('closeMenu')">
           <Icon icon="heroicons:arrow-down-tray-20-solid" class="w-5 h-5 flex-shrink-0" />
           <span>Export</span>
         </NuxtLink>
-        <NuxtLink to="/import" @click="emit('closeMenu')" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone">
+        <NuxtLink to="/import" class="flex items-center gap-3 px-4 py-3 text-gray-200 text-base font-semibold no-underline transition duration-200 hover:bg-gray-700 hover:text-moonstone" @click="emit('closeMenu')">
           <Icon icon="heroicons:arrow-up-tray-20-solid" class="w-5 h-5 flex-shrink-0" />
           <span>Import</span>
         </NuxtLink>

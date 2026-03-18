@@ -13,9 +13,9 @@
     >
       <button
         type="button"
-        @click="dismissPrompt"
         class="absolute top-2 right-2 text-gray-400 hover:text-gray-200 transition-colors"
         aria-label="Close"
+        @click="dismissPrompt"
       >
         <Icon icon="heroicons:x-mark-20-solid" class="w-5 h-5" />
       </button>
@@ -31,9 +31,9 @@
 
           <button
             type="button"
-            @click="installPwa"
             class="w-full px-4 py-2 rounded-lg font-semibold text-sm transition-colors duration-200"
             style="background-color: var(--color-success); color: var(--color-text-secondary);"
+            @click="installPwa"
           >
             Install App
           </button>
@@ -46,16 +46,17 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import { Icon } from '@iconify/vue';
+import type {BeforeInstallPromptEvent} from "@vite-pwa/nuxt/dist/runtime/plugins/types";
 
 const showPrompt = ref(false);
-let deferredPrompt: any = null;
+let deferredPrompt: BeforeInstallPromptEvent|null = null;
 
 onMounted(() => {
   const dismissed = localStorage.getItem('lovelyReminder_pwa-dismissed');
   const installed = localStorage.getItem('lovelyReminder_pwa-installed');
   if (dismissed || installed) return;
 
-  window.addEventListener('beforeinstallprompt', (e) => {
+  window.addEventListener('beforeinstallprompt', (e: BeforeInstallPromptEvent) => {
     e.preventDefault();
     deferredPrompt = e;
     setTimeout(() => { showPrompt.value = true; }, 3000);

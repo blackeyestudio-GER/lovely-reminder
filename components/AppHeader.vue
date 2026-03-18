@@ -4,7 +4,7 @@
       <AppLogo :size="36" class="text-moonstone md:w-10 md:h-10" />
       <span class="text-xl md:text-3xl lg:text-4xl text-moonstone">Lovely Reminder</span>
     </NuxtLink>
-    <button type="button" @click="emit('toggleMenu')" class="bg-transparent border-none cursor-pointer p-1 md:p-0" aria-label="Open menu">
+    <button type="button" class="bg-transparent border-none cursor-pointer p-1 md:p-0" aria-label="Open menu" @click="emit('toggleMenu')">
       <Icon icon="heroicons:cog-6-tooth-20-solid" class="w-7 h-7 md:w-8 md:h-8 text-moonstone" />
     </button>
   </div>

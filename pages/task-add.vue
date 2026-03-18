@@ -2,7 +2,7 @@
   <div class="bg-eerie-black rounded-lg p-4 md:p-6 shadow-md max-w-xl mx-auto">
     <h2 class="text-xl md:text-2xl font-bold text-gray-100 mb-4">Add Task</h2>
 
-    <form @submit.prevent="submit" class="flex flex-col gap-4">
+    <form class="flex flex-col gap-4" @submit.prevent="submit">
       <div>
         <label for="task-text" class="block text-sm font-semibold text-gray-200 mb-2">Task</label>
         <input
