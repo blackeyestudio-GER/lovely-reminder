@@ -24,7 +24,7 @@ const isMenuOpen = ref(false);
 const { userSettings, loadSettings } = useUserSettings();
 const { loadFromLocalStorage, checkAndReactivateTasks } = useTasks();
 
-const currentTheme = computed(() => userSettings.value.theme.selectedTheme || 'gothic');
+const currentTheme = computed(() => userSettings.value.theme || 'gothic');
 
 watch(currentTheme, (newTheme) => {
   if (typeof document !== 'undefined') {

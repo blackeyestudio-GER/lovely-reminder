@@ -1,21 +1,11 @@
 import { ref } from 'vue';
 
 export interface UserSettings {
-  theme: {
-    selectedTheme?: string;
-    primaryColor: string;
-    backgroundColor: string;
-    accentColor: string;
-  };
+  theme: string;
 }
 
 const defaultSettings: UserSettings = {
-  theme: {
-    selectedTheme: 'gothic',
-    primaryColor: '#7B68A6',
-    backgroundColor: '#0D0D0F',
-    accentColor: '#2D2A38',
-  },
+  theme: 'gothic',
 };
 
 const userSettings = ref<UserSettings>(defaultSettings);
@@ -48,11 +38,6 @@ export const useUserSettings = () => {
     saveSettings();
   };
 
-  const updateTheme = (theme: Partial<UserSettings['theme']>) => {
-    userSettings.value.theme = { ...userSettings.value.theme, ...theme };
-    saveSettings();
-  };
-
   const exportSettings = (): string => {
     return JSON.stringify(userSettings.value, null, 2);
   };
@@ -73,7 +58,6 @@ export const useUserSettings = () => {
     loadSettings,
     saveSettings,
     resetSettings,
-    updateTheme,
     exportSettings,
     importSettings,
   };

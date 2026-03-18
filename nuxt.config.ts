@@ -7,6 +7,33 @@ export default defineNuxtConfig({
     '~/assets/css/themes.css'
   ],
 
+  runtimeConfig: {
+    public: {
+      themes: [
+        {
+          id: 'gothic',
+          name: 'Dark Gothic',
+          description: 'Deep purples & blacks',
+        },
+        {
+          id: 'dracula',
+          name: 'Dracula',
+          description: 'Classic IDE palette',
+        },
+        {
+          id: 'business',
+          name: 'Business',
+          description: 'Clean & professional',
+        },
+        {
+          id: 'pastel',
+          name: 'Lovely Pastel',
+          description: 'Red & pink pastels',
+        },
+      ]
+    }
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
